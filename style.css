@@ -11,6 +11,7 @@ body {
   background: #aeaeae;
 }
 
+/* styles header with a blue background, white text, padding, and centered alignment */
 header {
   background: #1e88e5;
   color: white;
@@ -18,6 +19,7 @@ header {
   text-align: center;
 }
 
+/* centers the form && adds spacing, a white background, rounded corners, and a soft shadow */
 main {
   max-width: 500px;
   margin: 2rem auto;
@@ -27,11 +29,13 @@ main {
   box-shadow: 0 0 10px rgba(0,0,0,0.1);
 }
 
+/* ensures each input label is on a new line with spacing */
 form label {
   display: block;
   margin-bottom: 1rem;
 }
 
+/* styles the form inputs for uniform appearance */
 input[type="text"],
 input[type="number"],
 input[type="file"] {
@@ -40,6 +44,7 @@ input[type="file"] {
   margin-top: 0.25rem;
 }
 
+/* blue submit button with padding, rounded corners, bold text, and a hand cursor */
 button {
   background-color: #1e88e5;
   color: white;
@@ -50,19 +55,22 @@ button {
   font-weight: bold;
 }
 
+/* turns darker blue when you hover */
 button:hover {
   background-color: #1565c0;
 }
 
+/* styles message area under the form (ex: "Application submitted successfully!") */
 #statusMsg {
   margin-top: 2rem;
   font-weight: bold;
   color: green;
 }
 
+/* responsive adjustment for smaller screens */
 @media (max-width: 600px) {
   main {
-    margin: 1rem;
-    padding: 1rem;
+    margin: 1rem; /* reduces space outside the main content for smaller screens */
+    padding: 1rem; /* reduces space inside the main content area too */
   }
 }
