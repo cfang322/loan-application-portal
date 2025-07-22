@@ -1,12 +1,14 @@
+/* '*' applies to all elements: includes padding & border in width/height && send a global font */
 * {
   box-sizing: border-box;
   font-family: Arial, sans-serif;
 }
 
+/* removes default margin/padding && sets light grey background */
 body {
   margin: 0;
   padding: 0;
-  background: #f5f5f5;
+  background: #aeaeae;
 }
 
 header {
