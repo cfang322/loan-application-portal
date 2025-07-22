@@ -1,0 +1,63 @@
+<!-- Defines the document as an HTML5 file and starts HTML doc with language set to English -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <!-- ensures text displays coreetly for all languages and symbols across all browsers -->
+  <meta charset="UTF-8">
+  <!-- "viewpoint" ensures responsiveness on mobile -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- <title> sets the browser tab title -->
+  <title>Loan Application Portal</title>
+  <!-- below links external CSS file -->
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<!-- <body> starts the page content / <header> containes the main heading/title -->
+<body>
+  <header>
+    <h1>Loan Application Portal</h1>
+  </header>
+
+  <!-- <main> is the central content area / <form> starts the laon application form with ID loanForm -->
+  <!-- id is important to use to find the form in JavaScript so you can: add event listeners, read form data, submit or validate it /// can also be used to link directly to a part of the page (<a href="#loanForm">Jump to Form</a>
+) clicking that would scroll you to the form -->    
+  <main>
+    <form id="loanForm">
+      <!-- label and input field for the user's name / required makes it a mandatory field -->  
+      <label>
+        Full Name:
+        <input type="text" name="fullName" required>
+      </label>
+
+      <!-- input for loan amount (numeric only) -->
+      <label>
+        Loan Amount:
+        <input type="number" name="amount" required>
+      </label>
+
+      <label>
+        Annual Income:
+        <input type="number" name="income" required>
+      </label>
+
+      <!-- input to upload a file; restricts accepted fils to .pdf-->
+      <label>
+        Upload Income Proof (PDF only):
+        <input type="file" name="incomeProof" accept=".pdf" required>
+      </label>
+
+      <!-- submit button to trigger form submission -->
+      <button type="submit">Submit Application</button>
+    </form>
+
+    <!-- placeholder div for showing success/error messages -->
+    <div id="statusMsg"></div>
+  </main>
+
+  <!-- loads the external JavaScript file script.js -->
+  <!-- <script> tag is used to run JS inside an HTML page /// src="script.js" tells the browser to load and run JS code from the file script.js -->
+  <!-- this is placed before body because it ensures the HTML content loads first, that way when the JS runs, all elements (like buttons, forms, etc, already exist in the DOM[document object model]) -->  
+  <!-- the line below tells the browser to load and run your JS logic, like validating forms, handling button clicks, or updating the UI --> 
+  <script src="script.js"></script>
+</body>
+</html>
